@@ -343,12 +343,15 @@ mobs:register_mob("mobs_doom:cyberdemon", {
 		{name = "default:mese", chance = 2, min = 1, max = 1},
 		{name = "mobs:meat_raw", chance = 1, min = 3, max = 5},
 	},
+	on_activate = function(self)
+	self.texchanged = false
+	end,
 	do_custom = function(self)
 		local pos = self.object:getpos()
 		local node = minetest.get_node({x=pos.x, y=pos.y-1, z=pos.z}).name
-		if node == "hell:netherrack" and texchanged == nil then
+		if node == "hell:netherrack" and not self.texchanged then
 		self.object:set_properties({textures = {"mobs_cyberdemon.png"}})
-		textchanged = true
+		self.textchanged = true
 		end
 	end,
 	water_damage = 0,
@@ -454,12 +457,15 @@ mobs:register_mob("mobs_doom:mancubus", {
    drops = {
       {name = "mobs:meat_raw", chance = 1, min = 1, max = 2},
    },
+	on_activate = function(self)
+	self.texchanged = false
+	end,
 	do_custom = function(self)
 		local pos = self.object:getpos()
 		local node = minetest.get_node({x=pos.x, y=pos.y-1, z=pos.z}).name
-		if node == "hell:netherrack" and texchanged == nil then
+		if node == "hell:netherrack" and not self.texchanged then
 		self.object:set_properties({textures = {"mobs_mancubus.png"}})
-		textchanged = true
+		self.textchanged = true
 		end
 	end,
    water_damage = 2,
@@ -572,12 +578,15 @@ mobs:register_mob("mobs_doom:hellbaron", {
    drops = {
       {name = "default:steel_ingot", chance = 1, min = 1, max = 5},
    },
+	on_activate = function(self)
+	self.texchanged = false
+	end,
 	do_custom = function(self)
 		local pos = self.object:getpos()
 		local node = minetest.get_node({x=pos.x, y=pos.y-1, z=pos.z}).name
-		if node == "hell:netherrack" and texchanged == nil then
+		if node == "hell:netherrack" and not self.texchanged then
 		self.object:set_properties({textures = {"mobs_hellbaron2.png"}})
-		textchanged = true
+		self.textchanged = true
 		end
 	end,
    water_damage = 2,
