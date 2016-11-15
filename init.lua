@@ -349,7 +349,7 @@ mobs:register_mob("mobs_doom:cyberdemon", {
 	do_custom = function(self)
 		local pos = self.object:getpos()
 		local node = minetest.get_node({x=pos.x, y=pos.y-1, z=pos.z}).name
-		if node == "hell:netherrack" and not self.texchanged then
+		if node == "hell:netherrack" and self.texchanged == false then
 		self.object:set_properties({textures = {"mobs_cyberdemon.png"}})
 		self.textchanged = true
 		end
@@ -463,7 +463,7 @@ mobs:register_mob("mobs_doom:mancubus", {
 	do_custom = function(self)
 		local pos = self.object:getpos()
 		local node = minetest.get_node({x=pos.x, y=pos.y-1, z=pos.z}).name
-		if node == "hell:netherrack" and not self.texchanged then
+		if node == "hell:netherrack" and self.texchanged == false then
 		self.object:set_properties({textures = {"mobs_mancubus.png"}})
 		self.textchanged = true
 		end
@@ -584,7 +584,7 @@ mobs:register_mob("mobs_doom:hellbaron", {
 	do_custom = function(self)
 		local pos = self.object:getpos()
 		local node = minetest.get_node({x=pos.x, y=pos.y-1, z=pos.z}).name
-		if node == "hell:netherrack" and not self.texchanged then
+		if node == "hell:netherrack" and self.texchanged == false then
 		self.object:set_properties({textures = {"mobs_hellbaron2.png"}})
 		self.textchanged = true
 		end
