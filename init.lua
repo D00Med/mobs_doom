@@ -255,7 +255,7 @@ mobs:register_mob("mobs_doom:skull", {
    },
 })
 
-mobs:register_spawn("mobs_doom:skull", {"fire:basic_flame","default:leaves", "hell:netherrack"}, 20, 0, 15000, 2, 31000)
+mobs:register_spawn("mobs_doom:skull", {"fire:basic_flame","default:leaves", "hell:soul_stone"}, 20, 0, 15000, 2, 31000)
    
 mobs:register_egg("mobs_doom:skull", "Lost Soul", "wool_orange.png", 1)
 
@@ -306,7 +306,7 @@ mobs:register_mob("mobs_doom:cacodemon", {
    },
 })
 
-mobs:register_spawn("mobs_doom:cacodemon", {"fire:basic_flame","default:lava_flowing", "hell:netherrack"}, 20, 0, 15000, 2, 31000)
+mobs:register_spawn("mobs_doom:cacodemon", {"fire:basic_flame","default:lava_flowing", "hell:soul_stone"}, 20, 0, 15000, 2, 31000)
    
 mobs:register_egg("mobs_doom:cacodemon", "Cacodemon", "wool_red.png", 1)
 
@@ -349,7 +349,7 @@ mobs:register_mob("mobs_doom:cyberdemon", {
 	do_custom = function(self)
 		local pos = self.object:getpos()
 		local node = minetest.get_node({x=pos.x, y=pos.y-1, z=pos.z}).name
-		if node == "hell:netherrack" and self.texchanged == false then
+		if node == "hell:soul_stone" and self.texchanged == false then
 		self.object:set_properties({textures = {"mobs_cyberdemon.png"}})
 		self.textchanged = true
 		end
@@ -373,7 +373,7 @@ mobs:register_mob("mobs_doom:cyberdemon", {
 	},
 })
 
-mobs:register_spawn("mobs_doom:cyberdemon", {"nether:stone","default:dirt_with_grass", "hell:netherrack"}, 20, 0, 35000, 2, 31000)
+mobs:register_spawn("mobs_doom:cyberdemon", {"nether:stone","default:dirt_with_grass", "hell:soul_stone"}, 20, 0, 35000, 2, 31000)
 
 mobs:register_egg("mobs_doom:cyberdemon", "Cyberdemon", "wool_red.png", 1)
 
@@ -421,7 +421,7 @@ mobs:register_mob("mobs_doom:pinky", {
    },
 })
 
-mobs:register_spawn("mobs_doom:pinky", {"default:sandstone_brick","nether:stone", "hell:netherrack"}, 20, 0, 15000, 2, 31000)
+mobs:register_spawn("mobs_doom:pinky", {"default:sandstone_brick","nether:stone", "hell:soul_stone"}, 20, 0, 15000, 2, 31000)
    
 mobs:register_egg("mobs_doom:pinky", "Pinky", "wool_pink.png", 1)
 
@@ -463,7 +463,7 @@ mobs:register_mob("mobs_doom:mancubus", {
 	do_custom = function(self)
 		local pos = self.object:getpos()
 		local node = minetest.get_node({x=pos.x, y=pos.y-1, z=pos.z}).name
-		if node == "hell:netherrack" and self.texchanged == false then
+		if node == "hell:soul_stone" and self.texchanged == false then
 		self.object:set_properties({textures = {"mobs_mancubus.png"}})
 		self.textchanged = true
 		end
@@ -486,7 +486,7 @@ mobs:register_mob("mobs_doom:mancubus", {
    },
 })
 
-mobs:register_spawn("mobs_doom:mancubus", {"default:stone","default:sand", "hell:netherrack"}, 20, 0, 15000, 2, 31000)
+mobs:register_spawn("mobs_doom:mancubus", {"default:stone","default:sand", "hell:soul_stone"}, 20, 0, 15000, 2, 31000)
    
 mobs:register_egg("mobs_doom:mancubus", "Mancubus", "default_sand.png", 1)
 
@@ -542,7 +542,7 @@ mobs:register_mob("mobs_doom:imp", {
    },
 })
 
-mobs:register_spawn("mobs_doom:imp", {"default:dirt", "default:gravel", "hell:netherrack"}, 20, 0, 15000, 2, 31000)
+mobs:register_spawn("mobs_doom:imp", {"default:dirt", "default:gravel", "hell:soul_stone"}, 20, 0, 15000, 2, 31000)
    
 mobs:register_egg("mobs_doom:imp", "Imp", "default_dirt.png", 1)
 
@@ -584,7 +584,7 @@ mobs:register_mob("mobs_doom:hellbaron", {
 	do_custom = function(self)
 		local pos = self.object:getpos()
 		local node = minetest.get_node({x=pos.x, y=pos.y-1, z=pos.z}).name
-		if node == "hell:netherrack" and self.texchanged == false then
+		if node == "hell:soul_stone" and self.texchanged == false then
 		self.object:set_properties({textures = {"mobs_hellbaron2.png"}})
 		self.textchanged = true
 		end
@@ -609,6 +609,6 @@ mobs:register_mob("mobs_doom:hellbaron", {
    },
 })
 
-mobs:register_spawn("mobs_doom:hellbaron", {"default:lava_source", "default:stone", "hell:netherrack"}, 20, 0, 15000, 2, 31000)
+mobs:register_spawn("mobs_doom:hellbaron", {"default:lava_source", "default:stone", "hell:soul_stone"}, 20, 0, 15000, 2, 31000)
    
 mobs:register_egg("mobs_doom:hellbaron", "Hell Baron", "default_dirt.png", 1)
